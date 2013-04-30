@@ -1,0 +1,7 @@
+name 'deploy'
+version '0.9.0'
+author 'Chris Laskey'
+summary 'Deploys project files from a remote server, and configures the project locally.'
+description 'Deploys project files from a remote server, and configures the project locally.'
+license 'MIT License (http://opensource.org/licenses/MIT)'
+project_page 'http://github.com/chrislaskey'
