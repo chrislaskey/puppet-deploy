@@ -42,7 +42,8 @@ define deploy (
 	}
 
 	exec { "${project_name}-deploy-files.sh":
-		command => "test '${deploy_files}' = 'true' && ${local_websites_dir}/deploy-files.sh ${project_name}",
+		command => "${local_websites_dir}/deploy-files.sh ${project_name}",
+		onlyif => "test '${deploy_files}' = 'true'",
 		path => "/bin:/sbin:/usr/bin:/usr/sbin",
 		user => "root",
 		group => "root",
@@ -69,7 +70,8 @@ define deploy (
 	}
 
 	exec { "${project_name}-deploy-setup.sh":
-		command => "test '${deploy_setup}' = 'true' && ${local_websites_dir}/deploy-setup.sh ${project_name}",
+		command => "${local_websites_dir}/deploy-setup.sh ${project_name}",
+		onlyif => "test '${deploy_setup}' = 'true'",
 		path => "/bin:/sbin:/usr/bin:/usr/sbin",
 		user => "root",
 		group => "root",
