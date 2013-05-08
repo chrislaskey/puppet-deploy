@@ -31,7 +31,7 @@ define deploy (
 	if ! defined( File["${local_websites_dir}/deploy-files.sh"] ) {
 		file { "${local_websites_dir}/deploy-files.sh":
 			ensure => "present",
-			content => template("website/deploy-files.sh"),
+			content => template("deploy/deploy-files.sh"),
 			owner => "root",
 			group => "root",
 			mode => "0700",
@@ -58,7 +58,7 @@ define deploy (
 	if ! defined( File["${local_websites_dir}/deploy-setup.sh"] ) {
 		file { "${local_websites_dir}/deploy-setup.sh":
 			ensure => "present",
-			content => template("website/deploy-setup.sh"),
+			content => template("deploy/deploy-setup.sh"),
 			owner => "root",
 			group => "root",
 			mode => "0700",
