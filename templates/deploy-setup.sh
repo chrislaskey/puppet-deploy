@@ -9,7 +9,7 @@ project_name=$1
 project_path="<%= local_websites_dir %>"
 project_dir="${project_path}/${project_name}"
 project_config_dir="${project_dir}/<%= project_config_dir %>"
-mysql_root_envvars="/data/mysql/mysql_envvars.sh"
+mysql_root_envvars="/data/puppet/mysql_envvars.sh"
 
 # option_example_one=
 # option_example_two=
