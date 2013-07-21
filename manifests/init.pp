@@ -6,6 +6,7 @@ define deploy (
 	$remote_user = "deploy",
 	$deploy_setup = true,
 	$local_websites_dir = "/data/websites",
+	$mysql_root_envvars = "/data/puppet/mysql_envvars.sh",
 	$project_config_dir = ".config",
 ) {
 
