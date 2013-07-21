@@ -125,7 +125,7 @@ _configure_database () {
 	db_file="${db_directory}/database.sql"
 	_import_database_file "$db_file"
 
-	if ! mysql -u ${mysql_root_user} -p${mysql_root_password} ${db_name}; then
+	if ! mysql -u ${mysql_root_user} -p${mysql_root_password} -e "use '${db_name}'"; then
 		error "Could not find database: '${db_name}'. Likely a misconfigured db file: '${db_file}'"
 	fi
 }
