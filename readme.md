@@ -1,3 +1,15 @@
+Notice
+================================================================================
+
+This repository is no longer in development as of February 4, 2014. Though push
+based automated deployment with Puppet is interesting in concept, in practice
+I've migrated away from it as a deployment strategy.
+
+I'll leave this repository up for the time being. New work on deployment
+scripts using Python Fabric instead of Bash and Puppet can be found in the
+[chrislaskey/deploy](https://github.com/chrislaskey/deploy) repository.
+
+
 About
 ================================================================================
 
